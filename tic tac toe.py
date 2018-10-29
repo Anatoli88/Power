@@ -1,10 +1,11 @@
 choices = []
 
-for x in range(0,9):
+for x in range(0, 9):
     choices.append(str(x + 1))
 
 playerOneTurn = True
 winner = False
+
 
 def printBoard() :
     print('\n -----')
@@ -14,6 +15,7 @@ def printBoard() :
     print(' -----')
     print('|' + choices[6] + '|' + choices[7] + '|' + choices[8] + '|')
     print(' -----\n')
+
 
 while not winner:
     printBoard()
@@ -41,10 +43,10 @@ while not winner:
 
     for x in range(0, 3):
         y = x * 3
-        if(choices[y] == choices[(y + 1)] and choices[y] == choices[(y + 2)]):
+        if choices[y] == choices[(y + 1)] and choices[y] == choices[(y + 2)]:  # скобки были лишними
             winner = True
             printBoard()
-        if(choices[x] == choices[(x + 3)] and choices[x] == choices[(x + 6)]):
+        if choices[x] == choices[(x + 3)] and choices[x] == choices[(x + 6)]:  # скобки были лишними
             winner = True
             printBoard()
 

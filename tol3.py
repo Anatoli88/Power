@@ -9,7 +9,7 @@ for i in range(x):
 
     a = int(a)
 
-    if a %3 == 0:
+    if a % 3 == 0:  # следи за предупреждениями PEP8
         sum += a
 
 print(sum)
